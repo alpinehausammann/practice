@@ -1,0 +1,16 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+YearTest	../leap_test.py	/^class YearTest(unittest.TestCase):$/;"	kind:class	line:8
+is_leap_year	../leap.py	/^def is_leap_year(year):$/;"	kind:function	line:1
+is_leap_year	../leap_test.py	/^from leap import is_leap_year$/;"	kind:namespace	line:3
+leap.py	../leap.py	1;"	kind:file	line:1
+leap_test.py	../leap_test.py	1;"	kind:file	line:1
+test_year_divisible_by_100_not_divisible_by_400	../leap_test.py	/^    def test_year_divisible_by_100_not_divisible_by_400(self):$/;"	kind:member	line:15
+test_year_divisible_by_400	../leap_test.py	/^    def test_year_divisible_by_400(self):$/;"	kind:member	line:18
+test_year_divisible_by_4_not_divisible_by_100	../leap_test.py	/^    def test_year_divisible_by_4_not_divisible_by_100(self):$/;"	kind:member	line:12
+test_year_not_divisible_by_4	../leap_test.py	/^    def test_year_not_divisible_by_4(self):$/;"	kind:member	line:9
+unittest	../leap_test.py	/^import unittest$/;"	kind:namespace	line:1
