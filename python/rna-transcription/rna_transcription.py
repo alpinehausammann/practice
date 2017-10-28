@@ -3,15 +3,14 @@ from string import ascii_uppercase
 
 def to_rna(dna_strand):
     
-    dna_to_rna = {"A":"U","C":"G","G":"C","T":"A","U":"A"}
+    dna_to_rna = {"A":"U","C":"G","G":"C","T":"A"}
     rna_strand = ""
     
     for letter in str(dna_strand):
-        print(letter)
-        if letter.upper() in ascii_uppercase:
+        try:
             rna_strand += dna_to_rna[letter]
-        else:
-            continue
+        except KeyError:
+            return ""
     print(rna_strand)
     return rna_strand
 
