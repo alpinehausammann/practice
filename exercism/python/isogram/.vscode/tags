@@ -1,0 +1,23 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+TestIsogram	../isogram_test.py	/^class TestIsogram(unittest.TestCase):$/;"	kind:class	line:8
+is_isogram	../isogram.py	/^def is_isogram(string):$/;"	kind:function	line:2
+is_isogram	../isogram_test.py	/^from isogram import is_isogram$/;"	kind:namespace	line:3
+isogram.py	../isogram.py	1;"	kind:file	line:1
+isogram_test.py	../isogram_test.py	1;"	kind:file	line:1
+re	../isogram.py	/^import re$/;"	kind:namespace	line:1
+test_duplicated_character_in_the_middle	../isogram_test.py	/^    def test_duplicated_character_in_the_middle(self):$/;"	kind:member	line:34
+test_empty_string	../isogram_test.py	/^    def test_empty_string(self):$/;"	kind:member	line:10
+test_hypothetical_isogrammic_word_with_hyphen	../isogram_test.py	/^    def test_hypothetical_isogrammic_word_with_hyphen(self):$/;"	kind:member	line:25
+test_isogram_with_duplicated_letter_and_nonletter_character	../isogram_test.py	/^    def test_isogram_with_duplicated_letter_and_nonletter_character(self):$/;"	kind:member	line:37
+test_isogram_with_duplicated_non_letter_character	../isogram_test.py	/^    def test_isogram_with_duplicated_non_letter_character(self):$/;"	kind:member	line:28
+test_isogram_with_only_lower_case_characters	../isogram_test.py	/^    def test_isogram_with_only_lower_case_characters(self):$/;"	kind:member	line:13
+test_longest_reported_english_isogram	../isogram_test.py	/^    def test_longest_reported_english_isogram(self):$/;"	kind:member	line:19
+test_made_up_name_that_is_an_isogram	../isogram_test.py	/^    def test_made_up_name_that_is_an_isogram(self):$/;"	kind:member	line:31
+test_word_with_duplicated_character_in_mixed_case	../isogram_test.py	/^    def test_word_with_duplicated_character_in_mixed_case(self):$/;"	kind:member	line:22
+test_word_with_one_duplicated_character	../isogram_test.py	/^    def test_word_with_one_duplicated_character(self):$/;"	kind:member	line:16
+unittest	../isogram_test.py	/^import unittest$/;"	kind:namespace	line:1
