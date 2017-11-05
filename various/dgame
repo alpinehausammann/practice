@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+import curses
+
+screen = curses.initscr()
+dim = screen.getmaxyx()
+screen.keypad(1)
+
+
+mx = 10
+my = 10
+course = []
+draw_count_x = mx
+draw_count_y = my
+x_boarder = "_____"
+y_boarder = "|\n|\n|"
+for i in range(mx+1):
+	for j in range(my+1):
+		course.append((i,j))
+for i in range(my+1):		
+	screen.addstr(4, dim(1)//2-mx, mx*x_boarder)
+	
+screen.refresh()
