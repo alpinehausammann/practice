@@ -1,0 +1,86 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DNATests	../python/rna-transcription/rna_transcription_test.py	/^class DNATests(unittest.TestCase):$/;"	kind:class	line:8
+HammingTest	../python/hamming/hamming_test.py	/^class HammingTest(unittest.TestCase):$/;"	kind:class	line:8
+PangramTests	../python/pangram/pangram_test.py	/^class PangramTests(unittest.TestCase):$/;"	kind:class	line:8
+TestIsogram	../python/isogram/isogram_test.py	/^class TestIsogram(unittest.TestCase):$/;"	kind:class	line:8
+YearTest	../python/leap/leap_test.py	/^class YearTest(unittest.TestCase):$/;"	kind:class	line:8
+ascii_lowercase	../python/pangram/pangram.py	/^from string import ascii_lowercase$/;"	kind:namespace	line:2
+ascii_uppercase	../python/rna-transcription/rna_transcription.py	/^from string import ascii_uppercase$/;"	kind:namespace	line:1
+distance	../python/hamming/hamming.py	/^def distance(strand_a, strand_b):$/;"	kind:function	line:1
+hamming	../python/hamming/hamming_test.py	/^import hamming$/;"	kind:namespace	line:3
+hamming.py	../python/hamming/hamming.py	1;"	kind:file	line:1
+hamming_test.py	../python/hamming/hamming_test.py	1;"	kind:file	line:1
+is_isogram	../python/isogram/isogram.py	/^def is_isogram(string):$/;"	kind:function	line:2
+is_isogram	../python/isogram/isogram_test.py	/^from isogram import is_isogram$/;"	kind:namespace	line:3
+is_leap_year	../python/leap/leap.py	/^def is_leap_year(year):$/;"	kind:function	line:1
+is_leap_year	../python/leap/leap_test.py	/^from leap import is_leap_year$/;"	kind:namespace	line:3
+is_pangram	../python/pangram/pangram.py	/^def is_pangram(sentence):$/;"	kind:function	line:5
+is_pangram	../python/pangram/pangram_test.py	/^from pangram import is_pangram$/;"	kind:namespace	line:3
+isogram.py	../python/isogram/isogram.py	1;"	kind:file	line:1
+isogram_test.py	../python/isogram/isogram_test.py	1;"	kind:file	line:1
+leap.py	../python/leap/leap.py	1;"	kind:file	line:1
+leap_test.py	../python/leap/leap_test.py	1;"	kind:file	line:1
+pangram.py	../python/pangram/pangram.py	1;"	kind:file	line:1
+pangram_test.py	../python/pangram/pangram_test.py	1;"	kind:file	line:1
+re	../python/isogram/isogram.py	/^import re$/;"	kind:namespace	line:1
+re	../python/pangram/pangram.py	/^import re$/;"	kind:namespace	line:1
+rna_transcription.py	../python/rna-transcription/rna_transcription.py	1;"	kind:file	line:1
+rna_transcription_test.py	../python/rna-transcription/rna_transcription_test.py	1;"	kind:file	line:1
+test_another_missing_character_x	../python/pangram/pangram_test.py	/^    def test_another_missing_character_x(self):$/;"	kind:member	line:23
+test_complete_distance_in_single_nucleotide_strands	../python/hamming/hamming_test.py	/^    def test_complete_distance_in_single_nucleotide_strands(self):$/;"	kind:member	line:19
+test_complete_distance_in_small_strands	../python/hamming/hamming_test.py	/^    def test_complete_distance_in_small_strands(self):$/;"	kind:member	line:22
+test_correctly_handles_completely_invalid_input	../python/rna-transcription/rna_transcription_test.py	/^    def test_correctly_handles_completely_invalid_input(self):$/;"	kind:member	line:27
+test_correctly_handles_partially_invalid_input	../python/rna-transcription/rna_transcription_test.py	/^    def test_correctly_handles_partially_invalid_input(self):$/;"	kind:member	line:30
+test_correctly_handles_single_invalid_input	../python/rna-transcription/rna_transcription_test.py	/^    def test_correctly_handles_single_invalid_input(self):$/;"	kind:member	line:24
+test_disallow_first_strand_longer	../python/hamming/hamming_test.py	/^    def test_disallow_first_strand_longer(self):$/;"	kind:member	line:49
+test_disallow_second_strand_longer	../python/hamming/hamming_test.py	/^    def test_disallow_second_strand_longer(self):$/;"	kind:member	line:53
+test_duplicated_character_in_the_middle	../python/isogram/isogram_test.py	/^    def test_duplicated_character_in_the_middle(self):$/;"	kind:member	line:34
+test_empty_strands	../python/hamming/hamming_test.py	/^    def test_empty_strands(self):$/;"	kind:member	line:10
+test_empty_string	../python/isogram/isogram_test.py	/^    def test_empty_string(self):$/;"	kind:member	line:10
+test_hypothetical_isogrammic_word_with_hyphen	../python/isogram/isogram_test.py	/^    def test_hypothetical_isogrammic_word_with_hyphen(self):$/;"	kind:member	line:25
+test_identical_strands	../python/hamming/hamming_test.py	/^    def test_identical_strands(self):$/;"	kind:member	line:13
+test_isogram_with_duplicated_letter_and_nonletter_character	../python/isogram/isogram_test.py	/^    def test_isogram_with_duplicated_letter_and_nonletter_character(self):$/;"	kind:member	line:37
+test_isogram_with_duplicated_non_letter_character	../python/isogram/isogram_test.py	/^    def test_isogram_with_duplicated_non_letter_character(self):$/;"	kind:member	line:28
+test_isogram_with_only_lower_case_characters	../python/isogram/isogram_test.py	/^    def test_isogram_with_only_lower_case_characters(self):$/;"	kind:member	line:13
+test_large_distance	../python/hamming/hamming_test.py	/^    def test_large_distance(self):$/;"	kind:member	line:43
+test_large_distance_in_off_by_one_strand	../python/hamming/hamming_test.py	/^    def test_large_distance_in_off_by_one_strand(self):$/;"	kind:member	line:46
+test_long_identical_strands	../python/hamming/hamming_test.py	/^    def test_long_identical_strands(self):$/;"	kind:member	line:16
+test_longest_reported_english_isogram	../python/isogram/isogram_test.py	/^    def test_longest_reported_english_isogram(self):$/;"	kind:member	line:19
+test_made_up_name_that_is_an_isogram	../python/isogram/isogram_test.py	/^    def test_made_up_name_that_is_an_isogram(self):$/;"	kind:member	line:31
+test_missing_character_x	../python/pangram/pangram_test.py	/^    def test_missing_character_x(self):$/;"	kind:member	line:17
+test_missing_letters_replaced_by_numbers	../python/pangram/pangram_test.py	/^    def test_missing_letters_replaced_by_numbers(self):$/;"	kind:member	line:38
+test_non_unique_character_in_first_strand	../python/hamming/hamming_test.py	/^    def test_non_unique_character_in_first_strand(self):$/;"	kind:member	line:34
+test_non_unique_character_in_second_strand	../python/hamming/hamming_test.py	/^    def test_non_unique_character_in_second_strand(self):$/;"	kind:member	line:37
+test_pangram_with_mixedcase_and_punctuation	../python/pangram/pangram_test.py	/^    def test_pangram_with_mixedcase_and_punctuation(self):$/;"	kind:member	line:43
+test_pangram_with_numbers	../python/pangram/pangram_test.py	/^    def test_pangram_with_numbers(self):$/;"	kind:member	line:33
+test_pangram_with_only_lower_case	../python/pangram/pangram_test.py	/^    def test_pangram_with_only_lower_case(self):$/;"	kind:member	line:12
+test_pangram_with_underscores	../python/pangram/pangram_test.py	/^    def test_pangram_with_underscores(self):$/;"	kind:member	line:28
+test_same_nucleotides_in_different_positions	../python/hamming/hamming_test.py	/^    def test_same_nucleotides_in_different_positions(self):$/;"	kind:member	line:40
+test_sentence_empty	../python/pangram/pangram_test.py	/^    def test_sentence_empty(self):$/;"	kind:member	line:9
+test_small_distance	../python/hamming/hamming_test.py	/^    def test_small_distance(self):$/;"	kind:member	line:28
+test_small_distance_in_long_strands	../python/hamming/hamming_test.py	/^    def test_small_distance_in_long_strands(self):$/;"	kind:member	line:31
+test_small_distance_in_small_strands	../python/hamming/hamming_test.py	/^    def test_small_distance_in_small_strands(self):$/;"	kind:member	line:25
+test_transcribes_adenine_to_uracil	../python/rna-transcription/rna_transcription_test.py	/^    def test_transcribes_adenine_to_uracil(self):$/;"	kind:member	line:18
+test_transcribes_all_occurences	../python/rna-transcription/rna_transcription_test.py	/^    def test_transcribes_all_occurences(self):$/;"	kind:member	line:21
+test_transcribes_cytosine_to_guanine	../python/rna-transcription/rna_transcription_test.py	/^    def test_transcribes_cytosine_to_guanine(self):$/;"	kind:member	line:12
+test_transcribes_guanine_to_cytosine	../python/rna-transcription/rna_transcription_test.py	/^    def test_transcribes_guanine_to_cytosine(self):$/;"	kind:member	line:9
+test_transcribes_thymine_to_adenine	../python/rna-transcription/rna_transcription_test.py	/^    def test_transcribes_thymine_to_adenine(self):$/;"	kind:member	line:15
+test_upper_and_lower_case_versions_of_the_same_character	../python/pangram/pangram_test.py	/^    def test_upper_and_lower_case_versions_of_the_same_character(self):$/;"	kind:member	line:48
+test_word_with_duplicated_character_in_mixed_case	../python/isogram/isogram_test.py	/^    def test_word_with_duplicated_character_in_mixed_case(self):$/;"	kind:member	line:22
+test_word_with_one_duplicated_character	../python/isogram/isogram_test.py	/^    def test_word_with_one_duplicated_character(self):$/;"	kind:member	line:16
+test_year_divisible_by_100_not_divisible_by_400	../python/leap/leap_test.py	/^    def test_year_divisible_by_100_not_divisible_by_400(self):$/;"	kind:member	line:15
+test_year_divisible_by_400	../python/leap/leap_test.py	/^    def test_year_divisible_by_400(self):$/;"	kind:member	line:18
+test_year_divisible_by_4_not_divisible_by_100	../python/leap/leap_test.py	/^    def test_year_divisible_by_4_not_divisible_by_100(self):$/;"	kind:member	line:12
+test_year_not_divisible_by_4	../python/leap/leap_test.py	/^    def test_year_not_divisible_by_4(self):$/;"	kind:member	line:9
+to_rna	../python/rna-transcription/rna_transcription.py	/^def to_rna(dna_strand):$/;"	kind:function	line:4
+to_rna	../python/rna-transcription/rna_transcription_test.py	/^from rna_transcription import to_rna$/;"	kind:namespace	line:3
+unittest	../python/hamming/hamming_test.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../python/isogram/isogram_test.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../python/leap/leap_test.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../python/pangram/pangram_test.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../python/rna-transcription/rna_transcription_test.py	/^import unittest$/;"	kind:namespace	line:1
