@@ -1,23 +1,42 @@
-n = int(input())
-
-#phoneBook = {str(key):int(value) for i in range(n) for key, value in [input().strip().split()] if value == 8 }
-phoneBook ={}
-for i in range(n):
-    
+phoneBook = {}
+tries = 3
+while True:
     try:
-        u_input = input().strip().split()
-        if len(u_input[1]) == 8:
-            phoneBook[u_input[0]] = int(u_input[1])
-        else:
-            continue
+        n = int(input())
     except ValueError:
-        pass
-    print(phoneBook.items())
+        tries -= 1
+        if tries == 0:
+            print("You have reach the maximum amount of invalid entries\nAborting.")
+            break
+        else:
+            print("Entry was not an integer, please try again.")
+            continue
 
-for i in range(n):
-    u_input = str(input().strip())
-    try:
-        phoneBook[u_input]
-    except NameError:
-        print("Not Found")
-    print("{} = {}".format(u_input, phoneBook[u_input]))
+    for i in range(n):
+
+        while True:
+            try:
+                name, number = input().strip().split()
+            except ValueError:
+                break
+
+            if len(number) != 8:
+                break
+            else:
+                phoneBook[name] = number
+                break
+
+    for i in range(10**5):
+        name = str(input().strip())
+        try:
+            phoneBook[name]
+        except KeyError:
+            if name != "":
+                print("Not Found")
+                pass
+            else:
+                break
+        else:
+
+            print("{}={}".format(name, phoneBook[name]))
+    break
