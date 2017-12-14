@@ -13,7 +13,3 @@ def word_count(phrase):
         else:
             continue
     return word_dict
-    print(word_dict.items())
-
-
-word_count("hi there jimmy there hi they")

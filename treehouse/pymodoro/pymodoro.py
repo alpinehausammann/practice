@@ -49,7 +49,15 @@ class Pymodoro:
             buttons_frame,
             text='Stop'
         )
-        self.start_button.grid(row=0, column=0, sticky='ew', padx=10, pad)
+        self.start_button.grid(row=0, column=0, sticky='e', padx=10, pady=10
+        )
+        self.stop_button.grid(row=0, column=1, sticky='w', padx=10, pady=10
+        )
+    def button_onclick(self):
+        
+    def build_timer(self):
+        timer_frame = tkinter.Frame(self.mainframe)
+        timer_frame.grid()
 
 if __name__ == '__main__':
     root = tkinter.Tk()
