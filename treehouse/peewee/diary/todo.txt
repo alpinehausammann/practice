@@ -1,0 +1,28 @@
+diary exercise
+
+What we will be using
+---------------------
+
+Modules
+*******
+
+    peewee
+    datetime
+    clear_screen
+    Collections.OrderedDict()
+
+===========================
+
+        Plan
+---------------------
+
+Major Functionality
+*******************
+[] Create form for data entry
+[] Create a timestamp for each entry
+[] Prompt for save upon escape "ctrl-(d)/(c)"
+[] read entries previously Created
+[] edit entries
+[] delete Entries
+[] create menu object
+ 

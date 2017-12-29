@@ -92,13 +92,10 @@ def view_entry():
     while choice != "q":
         review_entries()
         print("Please enter the number entry you would like to view.\n")
-        choice = int(input("> "))
-        try:
-            view = Entry.select().where(Entry.id == choice).get()
+        choice = input("> ")
 
-        except all:
-            print("Invalid entry, try again.")
-            continue
+        view = Entry.select().where(id == choice).get()
+        print(view[content])
 
 
 menu = OrderedDict([
