@@ -1,0 +1,8 @@
+###### Game Instructions ######
+
+<Introduction>
+To Control direction of your snake use the UP, DOWN, LEFT, RIGHT keys.
+The objective of the game is to collect as many pieces of food as possible
+without running into your body! Watch out for the mysterious monsters
+lurking in the bites!
+</Introduction>
