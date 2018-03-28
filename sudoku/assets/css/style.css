@@ -1,0 +1,52 @@
+html {
+  background-color: #b4e3cc;
+}
+
+header {
+  text-align: center;
+  width: 66%;
+  margin: 0 auto;
+  background-color: #b8c8c0;
+}
+
+.container {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+body {
+  text-align: center;
+}
+
+main {
+  height: 600px;
+  min-width: 600px;
+  width: 50%;
+  background-color: white;
+  display: grid;
+  vertical-align: middle;
+}
+
+#frame {
+  display: grid;
+  margin: 40px auto 0 auto;
+  border: solid;
+  width: 500px;
+  height: 500px;
+  grid-template-areas: "blk1 blk2 blk3" "blk4 blk5 blk6" "blk7 blk8 blk9";
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+.grid div {
+  border: solid;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
