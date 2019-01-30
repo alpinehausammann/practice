@@ -12,7 +12,7 @@ FOUR_OF_A_KIND = "four_of_a_kind"
 LITTLE_STRAIGHT = "little_straight"
 BIG_STRAIGHT = "big_straight"
 CHOICE = "choice"
-number_categories = {"ones": 1, "twos": 2,
+NUMBER_CATEGORIES = {"ones": 1, "twos": 2,
                      "threes": 3, "fours": 4, "fives": 5, "sixes": 6}
 
 
@@ -74,15 +74,12 @@ def straight(arr, size):
         if size.lower() == "little":
             if bool(set(little).difference(arr)):
                 return 0
-            else:
-                return 30
+            return 30
+
+        if size.lower() == "big":
             if bool(set(big).difference(arr)):
                 return 0
-            else:
-                return 30
-
-def big_straight(arr):
-    pass
+            return 30
 
 
 def yacht(arr):
@@ -106,10 +103,9 @@ def sum_of_numbers(arr, num):
 def four_of_a_kind(arr):
     arr = number_count(arr, number_sort(arr))
     for i in arr:
-        if i[1] == 4:
-            return (i[0] * i[1])
-        else:
-            return 0
+        if i[1] >= 4:
+            return i[0] * 4
+        return 0
 
 
 def score(arr, category):
@@ -127,7 +123,7 @@ def score(arr, category):
         return straight(arr, "big")
     elif category == "little_straight":
         return straight(arr, "little")
-    elif category in number_categories.keys():
-        return sum_of_numbers(arr, number_categories[category])
+    elif category in NUMBER_CATEGORIES.keys():
+        return sum_of_numbers(arr, NUMBER_CATEGORIES[category])
     else:
         return 0
