@@ -41,11 +41,12 @@ class Rational(object):
     pass
 
   def __pow__(self, power):
-    pass
+  	return self.gcd(self.numer**power,self.denom**power)
+    
 
   def __rpow__(self, base):
-    	
-    pass
+    return round(base ** (self.numer/self.denom), 8)
+    
 
   def negative_check(self, numer, denom):
     if numer < 0 and denom < 0:
@@ -80,5 +81,5 @@ class Rational(object):
     return Rational(int(numer), int(denom))
 
 if __name__ == "__main__":
-  x = abs(Rational(-1,2))
+  x = Rational(-1,2) ** 9
   print(x)
