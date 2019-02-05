@@ -5,7 +5,6 @@ class Rational(object):
   def __init__(self, numer, denom):
     self.numer = numer
     self.denom = denom
-    self.numer, self.denom = self.gcd(self.numer,self.denom)
 
   def __eq__(self, other):
     return self.numer == other.numer and self.denom == other.denom
