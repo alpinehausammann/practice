@@ -38,7 +38,6 @@ class Rational(object):
 
   def __abs__(self):
     return self.gcd(self.numer * self.is_negative(self.numer),self.denom * self.is_negative(self.denom))
-    pass
 
   def __pow__(self, power):
   	return self.gcd(self.numer**power,self.denom**power)
@@ -52,7 +51,7 @@ class Rational(object):
     if numer < 0 and denom < 0:
       numer = numer * -1
       denom = denom * -1
-      return numer, denom
+    return numer, denom
 
   def is_negative(self, num):
     if num < 0:
