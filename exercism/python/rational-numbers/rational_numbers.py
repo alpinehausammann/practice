@@ -62,6 +62,9 @@ class Rational(object):
     negative = (self.is_negative(numer),self.is_negative(denom))
     numer = numer * negative[0]
     denom = denom * negative[1]
+    
+    if numer == 0 or denom == 0:
+      return Rational(0,1)
 
     if numer < denom:
       for i in range(numer, denom + 1):
@@ -73,9 +76,6 @@ class Rational(object):
         if numer % i == 0 and denom % i == 0:
           numer = (numer * negative[0]) / i
           denom = (denom * negative[1]) / i
-    elif numer == 0 or denom == 0:
-    	numer = 0
-    	denom = 1
     else:
       numer = 1
       denom = 1
