@@ -7,7 +7,7 @@ class Rational(object):
         self. numer = 0
         self.denom = 1
       else:
-        self.numer, self.denom = self.negative_correction(numer, denom)
+        numer, denom = self.negative_correction(numer, denom)
         self.numer = int(numer/self.gcd(numer,denom))
         self.denom = int(denom/self.gcd(numer,denom))
 
@@ -68,9 +68,9 @@ class Rational(object):
         if self.is_negative(numer) and self.is_negative(denom):
           numer = numer * -1
           denom = denom * -1
-        if not self.is_negative(numer) and self.is_negative(denom):
+        if self.is_negative(numer) == False and self.is_negative(denom):
           numer = numer * -1
-          denom = denom
+          denom = denom * -1
         return numer, denom
 
     def gcd(self, numer, denom):
@@ -96,6 +96,6 @@ class Rational(object):
         return int(temp_numer)
         
 if __name__ == '__main__':
-	x =Rational(-1,2) / Rational(-2,3)
+	x =Rational(3,-9).negative_correction(3,-9) #/ Rational(-2,3)
 	print(x)
 
