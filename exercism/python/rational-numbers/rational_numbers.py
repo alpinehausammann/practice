@@ -30,8 +30,7 @@ class Rational(object):
 
     def __mul__(self, other):
         numer = self.numer * other.numer
-        denom = self.denom * other.denom
-        # numer, denom = self.negative_check(numer, denom)
+        denom = self.denom * othed.denom
         return Rational(numer/self.gcd(numer, denom), denom/self.gcd(numer, denom))
 
     def __truediv__(self, other):
@@ -58,18 +57,14 @@ class Rational(object):
     def __rpow__(self, base):
         return round(base ** (self.numer / self.denom), 8)
 
-    def negative_check(self, numer, denom):
-        if numer < 0 and denom < 0:
-            numer = numer * -1
-            denom = denom * -1
-        return numer, denom
-
     def is_negative(self, num):
         if num < 0:
             return True
         return False
 
     def gcd(self, numer, denom):
+        if numer == 0 or denom == 0:
+        	return 1
 
         if self.is_negative(numer):
             temp_numer = numer * -1
@@ -89,7 +84,3 @@ class Rational(object):
 
         return int(temp_numer)
 
-
-if __name__ == "__main__":
-  x = Rational(-14,7) #+ Rational(-2,3)
-  print(x)
