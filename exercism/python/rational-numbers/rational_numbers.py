@@ -7,7 +7,7 @@ class Rational(object):
         self. numer = 0
         self.denom = 1
       else:
-        self.negative_correction(numer, denom)
+        self.numer, self.denom = self.negative_correction(numer, denom)
         self.numer = int(numer/self.gcd(numer,denom))
         self.denom = int(denom/self.gcd(numer,denom))
 
