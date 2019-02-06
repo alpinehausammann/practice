@@ -70,6 +70,7 @@ class Rational(object):
         return False
 
     def gcd(self, numer, denom):
+
         if self.is_negative(numer):
             temp_numer = numer * -1
         else:
@@ -90,5 +91,5 @@ class Rational(object):
 
 
 if __name__ == "__main__":
-#    x = Rational(2, 6) ** Rational(3,4)
-#    print(x)
+  x = Rational(-14,7) #+ Rational(-2,3)
+  print(x)
