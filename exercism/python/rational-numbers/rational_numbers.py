@@ -7,6 +7,7 @@ class Rational(object):
         self. numer = 0
         self.denom = 1
       else:
+        self.negative_correction(numer, denom)
         self.numer = int(numer/self.gcd(numer,denom))
         self.denom = int(denom/self.gcd(numer,denom))
 
@@ -19,24 +20,25 @@ class Rational(object):
     def __add__(self, other):
         numer = (self.numer * other.denom) + (other.numer * self.denom)
         denom = self.denom * other.denom
-        # numer, denom = self.negative_check(numer, denom)
+        numer, denom = self.negative_correction(numer, denom)
         return Rational(numer/self.gcd(numer,denom), denom/self.gcd(numer,denom))
 
     def __sub__(self, other):
         numer = (self.numer * other.denom) - (other.numer * self.denom)
         denom = self.denom * other.denom
-        # numer, denom = self.negative_check(numer, denom)
+        numer, denom = self.negative_correction(numer, denom)
         return Rational(numer/self.gcd(numer, denom), denom/self.gcd(numer, denom))
 
     def __mul__(self, other):
         numer = self.numer * other.numer
-        denom = self.denom * othed.denom
+        denom = self.denom * other.denom
+        numer, denom = self.negative_correction(numer, denom)
         return Rational(numer/self.gcd(numer, denom), denom/self.gcd(numer, denom))
 
     def __truediv__(self, other):
         numer = self.numer * other.denom
         denom = other.numer * self.denom
-        # numer, denom = self.negative_check(numer, denom)
+        numer, denom = self.negative_correction(numer, denom)
         return Rational(numer/self.gcd(numer, denom), denom/self.gcd(numer, denom))
 
     def __abs__(self):
@@ -61,6 +63,15 @@ class Rational(object):
         if num < 0:
             return True
         return False
+        
+    def negative_correction(self,numer,denom):
+        if self.is_negative(numer) and self.is_negative(denom):
+          numer = numer * -1
+          denom = denom * -1
+        if not self.is_negative(numer) and self.is_negative(denom):
+          numer = numer * -1
+          denom = denom
+        return numer, denom
 
     def gcd(self, numer, denom):
         if numer == 0 or denom == 0:
@@ -83,4 +94,8 @@ class Rational(object):
 
 
         return int(temp_numer)
+        
+if __name__ == '__main__':
+	x =Rational(-1,2) / Rational(-2,3)
+	print(x)
 
