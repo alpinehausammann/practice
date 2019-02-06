@@ -3,6 +3,10 @@ from __future__ import division
 
 class Rational(object):
     def __init__(self, numer, denom):
+      if numer == 0 or denom == 0:
+        self. numer = 0
+        self.denom = 1
+      else:
         self.numer = int(numer/self.gcd(numer,denom))
         self.denom = int(denom/self.gcd(numer,denom))
 
@@ -86,5 +90,5 @@ class Rational(object):
 
 
 if __name__ == "__main__":
-    x = Rational(2, 6) ** Rational(3,4)
-    print(x)
+#    x = Rational(2, 6) ** Rational(3,4)
+#    print(x)
