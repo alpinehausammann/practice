@@ -15,26 +15,59 @@
 
         var HelloWorld = React.createClass({
             propTypes: {
-                name: React.PropTypes.string.isRequired, //Sets property type. isRequired makes component have value else you will get an error.
+                name: React.PropTypes.string,
+                isPerson: React.PropTypes.bool, //Sets property type. isRequired makes component have value else you will get an error.
             },
 
             getDefaultProps: function() {
                 return {
-                    name: 'Ande', //Sets default property for 'name'. can be overridden by explictly setting at element call.
+                    name: 'World', //Sets default property for 'name'. can be overridden by explictly setting at element call.
+                }
+            },
+
+            getInitialState: function(){
+                return {
+                    value: //stopped at 3:14 video: https://www.leveluptutorials.com/tutorials/react-for-everyone/working-with-state
+
                 }
             },
 
             render: function() {
+                var greeting = "World";
+
+                if(this.props.isPerson) {
+                    greeting = (<Person name={this.props.name} />)
+                }
+
                 return(
-                    <h1>Hello {this.props.name}</h1> //Creates HTML from provided information given through properties.
+                    <h1>Hello {greeting}</h1>
+                    {this.state} //Creates HTML from provided information given through properties.
+                )
+            }
+        });
+
+        var Person = React.createClass({
+            propTypes: {
+                name: React.PropTypes.string.isRequired,
+
+            },
+
+            getDefaultProps: function(){
+                return {
+                    name: "Ande",
+                }
+            },
+
+            render: function(){
+                return(
+                    <span>{this.props.name}</span>
                 )
             }
         });
 
 
-
         ReactDOM.render(
-                <HelloWorld />, //calls the 'HelloWorld function'.
+                <HelloWorld name="Ande" isPerson={false} />, //calls the 'HelloWorld function'.
                 document.getElementById('area') //selects the id 'area' and renders the given function(s) in said area.
             );
         </script>
