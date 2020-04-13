@@ -1,0 +1,71 @@
+
+Stage 1: Data Collection
+Overall Objective: To have Access Tables for Inventory, Brakes, Rails, PercentComplete, MISRs
+
+Step 1: Determine the data that we want to store in database 
+                    Tables
+##############################################
+
+                   Inventory
+********************************************
+        FIELD                  Type
+  CraneNo(PrimaryKey)       String
+  Category                  String
+  InventoryPath             String
+
+                   Brakes
+********************************************
+        FIELD                  Type
+  BrakeID(PrimaryKey)       AutoNumber
+  CraneNo(ForeignKey)       String
+  Dissassembly              True/False
+  BrakePath                 String
+
+                   Rail
+********************************************
+        FIELD                  Type
+  RailID(PrimaryKey)        AutoNumber
+  CraneNo(ForeignKey)       String
+  InspectionType            String(Detail, Operational, LoadTest)
+  RailPath                  String
+
+                   MISRs
+********************************************
+        FIELD                  Type
+  MisrID(PrimaryKey)        AutoNumber
+  CraneNo(ForeignKey)       String
+  MisrType                  String(A, B, C, N/A)
+  MisrPath                  String
+  
+
+              PercentComplete
+********************************************
+        FIELD                  Type
+  PerComID(PrimaryKey)      AutoNumber
+  CraneNo(ForeignKey)       String
+  *PerComType               String(*ListItems)
+  PerComPath                String
+
+Step 2: How is the data going to be collected
+
+    Run a function for each of the needed tables to collect data
+    
+    What do all of these tables have in common?
+        -All tables contain the CraneNo, AutoNumber (Handled in Step 3), and a File Path
+        
+        Inventory - Category
+        Brakes - Dissassembly
+        Rail - InspectionType
+        MISRs - MisrType
+        PercentComplete - PerComType
+            These all save a property from a pre-selected list of properties
+            These can all be set in Step 3
+    
+    What functions do we need to get data?
+        -Get the CraneNo
+        -Get the wanted file Path
+         
+
+Step 3: Storing data in table
+    How are we going to 
+    How are we going to get the collected data to the table?
