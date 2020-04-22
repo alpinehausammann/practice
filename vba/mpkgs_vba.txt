@@ -1,0 +1,137 @@
+Option Compare Database
+Option Explicit
+
+Function ArrLength(Arr As Variant) As Integer
+     
+     ArrLength = UBound(Arr) - LBound(Arr) + 1
+
+End Function
+
+Function GetFolderNames(Folder) As Variant
+    
+    Dim Item As Variant
+    Dim FileName As String
+    Dim PathArray As Variant
+    Dim ArrayLen As Integer
+    Dim FolderNameArray() As Variant
+    Dim I As Integer
+    
+    ArrayLen = Folder.SubFolders.Count
+    'Debug.Print ArrayLen
+    I = 0
+    ReDim FolderNameArray(ArrayLen - 1)
+    
+    For Each Item In Folder.SubFolders
+    
+        PathArray = Split(Item, "\")
+        ArrayLen = ArrLength(PathArray)
+        FileName = PathArray(ArrayLen - 1)
+        FolderNameArray(I) = FileName
+        I = I + 1
+    Next
+    
+    GetFolderNames = FolderNameArray
+
+End Function
+
+Function RebuildArr(Arr, ArrItem, arrLen) As Variant
+    ReDim Preserve Arr(arrLen)
+    
+    Arr(arrLen) = ArrItem
+    
+    RebuildArr = Arr
+
+End Function
+
+Function GetFileDirs(myPath)
+    Dim File
+    
+
+End Function
+
+
+Function GetCategories(FileSystem, myPath)
+    
+    GetCategories = GetFolderNames(FileSystem.GetFolder(myPath))
+
+End Function
+
+Function GetCraneNo(FileSystem, myPath, CategoryArr)
+    Dim Item
+    Dim Name
+    Dim Element
+    Dim CompleteArr(2) As Variant
+
+    
+    
+    Dim I As Integer
+    I = 0
+    'ReDim CompleteArr(ArrLength(CategoryArr - 1), ArrLength(CategoryArr - 1))
+  
+    For Each Item In CategoryArr
+        Dim CraneNoArr As Variant
+        
+        CraneNoArr = Array(Item, GetFolderNames(FileSystem.GetFolder(myPath & "\" & Item)))
+        CompleteArr(I) = CraneNoArr
+        
+        Erase CraneNoArr
+        
+        I = I + 1
+    Next
+    
+    GetCraneNo = CompleteArr
+    
+End Function
+
+Function GetBrakeData(FileSystem, myPath, CraneNoArr)
+
+    For Each
+           
+    
+       
+End Function
+
+Sub GatherData()
+    Dim myPath As String
+    Dim FileSystem As Object
+    Dim CategoryArr As Variant
+    Dim CraneNoArr As Variant
+    Dim Item
+    Dim Arr
+    Dim I
+    
+    myPath = "C:\Users\alpin\OneDrive\Desktop\test"
+    Set FileSystem = CreateObject("Scripting.FileSystemObject")
+    
+    CategoryArr = GetCategories(FileSystem, myPath)
+    'Debug.Print CategoryArr(1)
+    
+    CraneNoArr = GetCraneNo(FileSystem, myPath, CategoryArr)
+      
+       
+   ' Debug.Print CraneNoArr(0, 0)
+    For Each Arr In CraneNoArr
+        For Each Item In Arr(1)
+            Debug.Print Item '(ArrLength(Arr))
+        Next
+    Next
+
+End Sub
+
+
+
+
+
+
+Sub MakeTable()
+    Dim db As Database
+    Dim NewTblDef As TableDef
+    
+    db = CurrentDb
+    
+    
+    
+End Sub
+
+
+
